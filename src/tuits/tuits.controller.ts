@@ -9,9 +9,14 @@ import {
   Body, 
   HttpCode, 
   HttpStatus } from '@nestjs/common';
+import { TuitsService } from './tuits.service';
 
 @Controller('tuits')
 export class TuitsController {
+  constructor(private readonly tuitService: TuitsService) {
+    //
+  }
+
   @Get()
   getTuits(): string {
     return 'Hello from Tuitter !!!';
