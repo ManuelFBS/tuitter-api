@@ -33,10 +33,6 @@ export class TuitsController {
     return this.tuitService.getTuits();
   }
 
-  //   @Get('/:id')     // tuits/1...
-  //   getTuit(@Param() params) {
-  //     return `Your tuit id is: ${params.id}`;
-  //   }
   @Get('/:id')
   getTuit(@Param('id') id: string): Tuit {
     // return `Your tuit id is: ${id}`;
