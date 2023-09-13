@@ -20,7 +20,6 @@ export class TuitsController {
 
   @Get()
   getTuits(): Tuit[] {
-    // return 'Hello from Tuitter !!!';
     return this.tuitService.getTuits();
   }
 
@@ -39,7 +38,7 @@ export class TuitsController {
 
   @Post()
   createTuit(@Body() message: CreateTuitDto): void {
-    console.log(message instanceof CreateTuitDto);
+    // console.log(message instanceof CreateTuitDto);
     return this.tuitService.createTuit(message);
   }
 
@@ -50,7 +49,6 @@ export class TuitsController {
 
   @Delete('/:id')
   deleteTuit(@Param('id') id: string): void {
-    // return `The tuit id: ${id} has been deleted...!`;
     return this.tuitService.removeTuit(id);
   }
 }
